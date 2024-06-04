@@ -14,7 +14,7 @@ public class Recipe {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     @Column
@@ -48,7 +48,8 @@ public class Recipe {
     @Column
     List<String> categories;
 
-   @Column
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     ChefUser creator;
 
     @Column
@@ -56,8 +57,6 @@ public class Recipe {
 
     @Column
     Date lastModified;
-
-
 
 
 }

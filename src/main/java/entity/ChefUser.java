@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import javax.management.relation.Role;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class ChefUser {
@@ -12,10 +13,11 @@ public class ChefUser {
     public ChefUser() {
     }
 
+    @OneToMany
+    Set<Recipe> recipe;
 
     @Column(name="user_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
     @Column

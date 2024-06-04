@@ -2,7 +2,6 @@ package entity;
 
 import jakarta.persistence.*;
 
-import javax.lang.model.element.Name;
 import java.util.Date;
 
 @Entity
@@ -16,7 +15,7 @@ public class Rating {
     int id;
 
     @Column(name="rating_value")
-    int value;
+    int rating_value;
 
     @Column
     Date dateRated;

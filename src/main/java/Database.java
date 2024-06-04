@@ -22,6 +22,8 @@ public class Database {
                   .addAnnotatedClass(Ingredient.class)
                   .addAnnotatedClass(Rating.class)
                   .addAnnotatedClass(Tag.class)
+                  .addAnnotatedClass(Comment.class)
+
                         // options to display SQL in console
                         .setProperty(SHOW_SQL, TRUE.toString())
                         .setProperty(FORMAT_SQL, TRUE.toString())
