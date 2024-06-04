@@ -8,6 +8,10 @@ import java.util.Date;
 @Entity
 public class User {
 
+    public User() {
+    }
+
+    @Column(name="user_id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;

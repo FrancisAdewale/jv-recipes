@@ -7,6 +7,9 @@ import java.util.Date;
 @Entity
 public class Rating {
 
+    public Rating() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -20,7 +23,7 @@ public class Rating {
     @Column
     String associatedRecipe;
 
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     User rater;
 
 }

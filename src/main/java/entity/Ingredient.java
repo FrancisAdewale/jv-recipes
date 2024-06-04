@@ -7,6 +7,9 @@ import jakarta.persistence.Id;
 
 public class Ingredient {
 
+    public Ingredient() {
+    }
+
     @Id
     @Column(name="recipe_id")
     @GeneratedValue(strategy = GenerationType.AUTO)

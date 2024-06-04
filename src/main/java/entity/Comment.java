@@ -7,6 +7,9 @@ import java.util.Date;
 @Entity
 public class Comment {
 
+    public Comment() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -18,7 +21,7 @@ public class Comment {
     Date datePosted;
 
 
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     User author;
 
     @Column

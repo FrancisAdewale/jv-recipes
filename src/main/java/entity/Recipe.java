@@ -8,6 +8,9 @@ import java.util.List;
 @Entity
 public class Recipe {
 
+    public Recipe() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -36,13 +39,14 @@ public class Recipe {
     @Column
     String rating;
 
-    @Column
+
+    @JoinColumn(name = "recipe_id")
     List<Ingredient> ingredients;
 
     @Column
     List<String> categories;
 
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     User creator;
 
     @Column
