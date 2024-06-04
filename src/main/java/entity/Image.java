@@ -4,32 +4,21 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-import java.util.Date;
+import java.io.File;
 
 @Entity
-public class Comment {
+public class Image {
 
     @Id
     int id;
 
     @Column
-    String text;
+    String fileName;
 
     @Column
-    Date datePosted;
-
-    @Column
-    User author;
+    File fileData;
 
     @Column
     String associatedRecipe;
-
-
-
-
-
-
-
-
 
 }

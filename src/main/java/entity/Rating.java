@@ -4,30 +4,24 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-import javax.management.relation.Role;
 import java.util.Date;
 
 @Entity
-public class User {
+public class Rating {
 
     @Id
     int id;
 
     @Column
-    String username;
+    int value;
 
     @Column
-    String password;
+    Date dateRated;
 
     @Column
-    Role role;
+    String associatedRecipe;
 
     @Column
-    String email;
-
-    @Column
-    Date dateRegistered;
-
-
+    User rater;
 
 }
