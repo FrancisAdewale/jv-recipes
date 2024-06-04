@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 
 import javax.management.relation.Role;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-public class User {
+public class ChefUser {
 
-    public User() {
+    public ChefUser() {
     }
+
 
     @Column(name="user_id")
     @Id
@@ -23,7 +25,7 @@ public class User {
     String password;
 
     @Column
-    Role role;
+    String role;
 
     @Column
     String email;
@@ -31,6 +33,5 @@ public class User {
     @Column
     Date dateRegistered;
 
-
-
 }
+

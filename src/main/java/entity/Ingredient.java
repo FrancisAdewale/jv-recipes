@@ -11,7 +11,7 @@ public class Ingredient {
     }
 
     @Id
-    @Column(name="recipe_id")
+    @Column(name="ingredient_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 

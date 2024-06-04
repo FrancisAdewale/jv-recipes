@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+import static jakarta.persistence.FetchType.LAZY;
+
 @Entity
 public class Recipe {
 
@@ -40,20 +42,21 @@ public class Recipe {
     String rating;
 
 
-    @JoinColumn(name = "recipe_id")
-    List<Ingredient> ingredients;
+    @Column
+    List<String> ingredients;
 
     @Column
     List<String> categories;
 
-    @JoinColumn(name = "user_id")
-    User creator;
+   @Column
+    ChefUser creator;
 
     @Column
     Date dateCreated;
 
     @Column
     Date lastModified;
+
 
 
 

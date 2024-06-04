@@ -20,9 +20,8 @@ public class Comment {
     @Column
     Date datePosted;
 
-
-    @JoinColumn(name = "user_id")
-    User author;
+    @Column
+    String author;
 
     @Column
     String associatedRecipe;

@@ -2,6 +2,7 @@ package entity;
 
 import jakarta.persistence.*;
 
+import javax.lang.model.element.Name;
 import java.util.Date;
 
 @Entity
@@ -14,7 +15,7 @@ public class Rating {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
-    @Column
+    @Column(name="rating_value")
     int value;
 
     @Column
@@ -23,7 +24,7 @@ public class Rating {
     @Column
     String associatedRecipe;
 
-    @JoinColumn(name = "user_id")
-    User rater;
+    @Column
+    String rater;
 
 }

@@ -15,7 +15,7 @@ public class Image {
     String fileName;
 
     @Column
-    File fileData;
+    String fileData;
 
     @Column
     String associatedRecipe;
