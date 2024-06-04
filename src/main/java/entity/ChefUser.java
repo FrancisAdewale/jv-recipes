@@ -14,7 +14,13 @@ public class ChefUser {
     }
 
     @OneToMany
-    Set<Recipe> recipe;
+    Set<Recipe> recipes;
+
+    @OneToMany
+    Set<Comment> comments;
+
+    @OneToOne
+    Rating rating;
 
     @Column(name="user_id")
     @Id
@@ -27,7 +33,7 @@ public class ChefUser {
     String password;
 
     @Column
-    String role;
+    Role roles;
 
     @Column
     String email;

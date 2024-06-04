@@ -23,7 +23,8 @@ public class Rating {
     @Column
     String associatedRecipe;
 
-    @Column
-    String rater;
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    ChefUser rater;
 
 }

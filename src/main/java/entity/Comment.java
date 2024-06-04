@@ -20,8 +20,9 @@ public class Comment {
     @Column
     Date datePosted;
 
-    @Column
-    String author;
+    @JoinColumn(name = "user_id")
+    @ManyToOne
+    ChefUser author;
 
     @Column
     String associatedRecipe;
