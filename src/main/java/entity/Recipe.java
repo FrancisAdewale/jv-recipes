@@ -9,7 +9,7 @@ import java.util.List;
 public class Recipe {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
     @Column
@@ -42,7 +42,7 @@ public class Recipe {
     @Column
     List<String> categories;
 
-    @Column
+    @JoinColumn(name = "id")
     User creator;
 
     @Column

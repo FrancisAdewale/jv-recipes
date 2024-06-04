@@ -1,9 +1,6 @@
 package entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -11,7 +8,7 @@ import java.util.Date;
 public class Comment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
     @Column
@@ -20,7 +17,8 @@ public class Comment {
     @Column
     Date datePosted;
 
-    @Column
+
+    @JoinColumn(name = "id")
     User author;
 
     @Column
