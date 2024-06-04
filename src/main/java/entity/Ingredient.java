@@ -1,11 +1,14 @@
 package entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 public class Ingredient {
 
     @Id
+    @GeneratedValue
+
     int id;
 
     @Column
@@ -15,5 +18,5 @@ public class Ingredient {
     int quantity;
 
     @Column
-    String unitOfMeasurementl;
+    String unitOfMeasurement;
 }
